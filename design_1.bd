@@ -1,0 +1,275 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1A11E921517740A9",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../riscv_zybo.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "riscv_soc_0": "",
+      "led1": "",
+      "xlconstant_0": "",
+      "util_vector_logic_0": "",
+      "vio_0": "",
+      "c_counter_binary_0": "",
+      "xlslice_0": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "led0": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "riscv_soc_0": {
+        "vlnv": "xilinx.com:hls:riscv_soc:1.0",
+        "xci_name": "design_1_riscv_soc_0_0",
+        "xci_path": "ip\\design_1_riscv_soc_0_0\\design_1_riscv_soc_0_0.xci",
+        "inst_hier_path": "riscv_soc_0"
+      },
+      "led1": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "led1",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "125"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_1_vio_0_0",
+        "xci_path": "ip\\design_1_vio_0_0\\design_1_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "6"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "5"
+          },
+          "C_PROBE_OUT3_WIDTH": {
+            "value": "5"
+          },
+          "C_PROBE_OUT4_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "c_counter_binary_0": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "xci_name": "design_1_c_counter_binary_0_0",
+        "xci_path": "ip\\design_1_c_counter_binary_0_0\\design_1_c_counter_binary_0_0.xci",
+        "inst_hier_path": "c_counter_binary_0",
+        "parameters": {
+          "Output_Width": {
+            "value": "27"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_0_0",
+        "xci_path": "ip\\design_1_xlslice_0_0\\design_1_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "26"
+          },
+          "DIN_TO": {
+            "value": "26"
+          },
+          "DIN_WIDTH": {
+            "value": "27"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "c_counter_binary_0_Q": {
+        "ports": [
+          "c_counter_binary_0/Q",
+          "xlslice_0/Din"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "sys_clock",
+          "led1/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "led1/clk_out1",
+          "riscv_soc_0/ap_clk",
+          "vio_0/clk",
+          "c_counter_binary_0/CLK"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "led1/locked",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "riscv_soc_0_dbg_count": {
+        "ports": [
+          "riscv_soc_0/dbg_count",
+          "vio_0/probe_in3"
+        ]
+      },
+      "riscv_soc_0_dbg_halted": {
+        "ports": [
+          "riscv_soc_0/dbg_halted",
+          "vio_0/probe_in4"
+        ]
+      },
+      "riscv_soc_0_dbg_instr": {
+        "ports": [
+          "riscv_soc_0/dbg_instr",
+          "vio_0/probe_in1"
+        ]
+      },
+      "riscv_soc_0_dbg_mem": {
+        "ports": [
+          "riscv_soc_0/dbg_mem",
+          "vio_0/probe_in5"
+        ]
+      },
+      "riscv_soc_0_dbg_pc": {
+        "ports": [
+          "riscv_soc_0/dbg_pc",
+          "vio_0/probe_in0"
+        ]
+      },
+      "riscv_soc_0_dbg_reg": {
+        "ports": [
+          "riscv_soc_0/dbg_reg",
+          "vio_0/probe_in2"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "riscv_soc_0/ap_rst"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "riscv_soc_0/btn_reset"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "riscv_soc_0/btn_step"
+        ]
+      },
+      "vio_0_probe_out2": {
+        "ports": [
+          "vio_0/probe_out2",
+          "riscv_soc_0/btn_run"
+        ]
+      },
+      "vio_0_probe_out3": {
+        "ports": [
+          "vio_0/probe_out3",
+          "riscv_soc_0/reg_sel"
+        ]
+      },
+      "vio_0_probe_out4": {
+        "ports": [
+          "vio_0/probe_out4",
+          "riscv_soc_0/mem_sel"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "riscv_soc_0/ap_start"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "led0"
+        ]
+      }
+    }
+  }
+}
